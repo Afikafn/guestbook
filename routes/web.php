@@ -28,4 +28,6 @@ Route::group([
     // Routing CRUD dari instituion
     Route::resource('/institution', App\Http\Controllers\InstitutionController::class);
 
+    Route::resource('/guests', App\Http\Controllers\GuestController::class)->only(['index', 'show', 'destroy']);  //only -> yang ditampilkan , exept-> yang tidak ditampilkan
+
 });
