@@ -30,4 +30,6 @@ Route::group([
 
     Route::resource('/guests', App\Http\Controllers\GuestController::class)->only(['index', 'show', 'destroy']);  //only -> yang ditampilkan , exept-> yang tidak ditampilkan
 
+    Route::get('/reports', [App\Http\Controllers\ReportController::class, 'index'])->name('reports.index');
+
 });

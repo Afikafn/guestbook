@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="py-4">
-        <h3 class="fw-bold mb-2 pb-2 border-bottom">Detail Nama Institusi</h3>
+        <h3 class="fw-bold mb-2 pb-2 border-bottom"><span class="bi bi-building"></span>Detail Institution</h3>
 
-        <a href="{{ route('admin.institution.index') }}" class="btn btn-sm btn-secondary mb-2">Kembali</a>
+        <a href="{{ route('admin.institution.index') }}" class="btn btn-sm btn-secondary mb-2"><span class="bi bi-arrow-left-circle"></span> Back </a>
 
         <table class="table table-striped table-bordered">
             <tr>

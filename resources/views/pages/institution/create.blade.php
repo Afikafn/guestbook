@@ -22,8 +22,8 @@
         </div>        
     </section>
 
-                    <button type="submit" class="btn btn-sm btn-primary mb-3">Simpan</button>
-                    <a href="{{ route('admin.institution.index') }}" class="btn btn-sm btn-secondary mb-3">Kembali</a>
+                    <button type="submit" class="btn btn-sm btn-primary mb-3"><span class="bi bi-save "></span> Save </button>
+                    <a href="{{ route('admin.institution.index') }}" class="btn btn-sm btn-secondary mb-3"><span class="bi bi-arrow-left-circle"></span> Back</a>
                 </form> 
 </div> 
 @endsection

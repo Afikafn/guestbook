@@ -76,7 +76,7 @@
                     title: "Are you sure?",
                     text: "Once deleted, you will not be able to recover this imaginary file!",
                     icon: "warning",
-                    buttons: ['Batal', 'Ya, Hapus!'],
+                    buttons: ['Cancel', 'Yes, Delete!'],
                     dangerMode: true,
                     
                 })

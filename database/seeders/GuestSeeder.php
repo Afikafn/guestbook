@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Guest;
+use App\Models\Institution;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,13 +14,13 @@ class GuestSeeder extends Seeder
      */
     public function run(): void
     {
-        Guest::create([
-            'fullname' => 'John Doe',
-            'institution_id' => 10,
-            'from' => 'Laravel Academy',
-            'phonenumber' => '08123456789',
-            'email' => 'johndoe@mail.com',
-            'note' => 'Test'
-        ]);
+        Institution::create(['name' => 'Perusahaan']);
+        Institution::create(['name' => 'Dinas']);
+        Institution::create(['name' => 'Sekolah']);
+
+        Guest::factory(100)->create();
     }
+
+
+
 }
