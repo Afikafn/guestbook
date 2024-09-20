@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\FormGuestController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return redirect('/admin');
-});
+Route::get('/', [FormGuestController::class, 'index'])->name('form.index');  //jika menggunakan get maka harus menggunakan array dan membuat route untuk proses simpan
+
+Route::post('/', [FormGuestController::class, 'store'])->name('form.store');
 
 Auth::routes([
     'register' => false,
@@ -17,7 +18,7 @@ Route::group([
     'middleware' => ['auth'], 
     'prefix' => 'admin',  // URL => admin/tamu
     'as' => 'admin.'  // route(admin.) => nama
-], function() {
+], function() { 
 
     // guestbook.test/admin -> route('admin.index')
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
